@@ -4,7 +4,6 @@
 // but you don't so you're going to write it from scratch:
 
 var stringifyJSON = function(obj) {
-  console.log(obj);
   var stringify = ``;
   if (obj === null) {
     return 'null';
@@ -15,8 +14,7 @@ var stringifyJSON = function(obj) {
     for (var key in obj) {
       var value = obj[key];
       var formatted = '';
-      if (!_.isFunction(value) ) {
-        console.log(key, value);
+      if (!_.isFunction(value)) {
         if (!isArray) {
           formatted += `"${key}":`;
         }
